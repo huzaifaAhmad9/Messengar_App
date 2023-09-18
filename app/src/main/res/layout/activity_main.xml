@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/upper"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/back_upper">
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/bottom"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/back_lower">
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="100dp"
+        android:layout_height="100dp">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/chat"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MESSENGER"
+            android:layout_marginTop="100dp"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textColor="#4c6ef5"
+            android:layout_marginLeft="20dp"/>
+    </LinearLayout>
+    
+    <RelativeLayout
+        android:layout_width="380dp"
+        android:layout_height="220dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="270dp">
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="22dp"
+            app:cardBackgroundColor="#e9ecef"
+            app:cardElevation="50dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <EditText
+                    android:layout_marginTop="30dp"
+                    android:id="@+id/phone_number"
+                    android:layout_width="340dp"
+                    android:layout_height="50dp"
+                    android:hint="Enter Phone Number"
+                    android:textColorHint="#4c6ef5"
+                    android:layout_marginLeft="20dp"
+                    android:inputType="phone"
+                    android:ems="10"
+                    android:textSize="17sp"
+                    android:drawableRight="@drawable/baseline_phone_24"/>
+
+
+                <EditText
+                    android:layout_width="340dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/message"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:hint="Type Your Message"
+                    android:textColorHint="#4c6ef5"
+                    android:ems="10"
+                    android:textSize="17sp"
+                    android:inputType="textMultiLine"
+                    android:drawableRight="@drawable/baseline_message_24"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:text="SENT"
+        android:backgroundTint="#4c6ef5"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:layout_marginTop="450dp"
+        android:layout_marginLeft="135dp"
+        />
+
+
+
+</RelativeLayout>
